@@ -9,6 +9,6 @@ plugins {
 }
 buildscript {
     dependencies {
-        classpath("com.spotify.ruler:ruler-gradle-plugin:2.0.0-beta-3")
+        classpath(libs.ruler.gradle.plugin)
     }
 }

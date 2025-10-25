@@ -20,6 +20,9 @@ composeBom = "2025.08.00"
 navigationCompose = "2.9.3"
 retrofit = "3.0.0"
 roomRuntime = "2.7.2"
+rulerGradlePlugin = "2.0.0-beta-3"
+buildTimeTracker = "5.0.1"
+detekt = "2.0.0-alpha.1"
 workRuntimeKtx = "2.10.3"
 
 [libraries]
@@ -54,6 +57,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+ruler-gradle-plugin = { module = "com.spotify.ruler:ruler-gradle-plugin", version.ref = "rulerGradlePlugin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -62,3 +66,5 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "googleKsp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+build-time-tracker = { id = "com.asarkar.gradle.build-time-tracker", version.ref = "buildTimeTracker" }
+detekt = { id = "dev.detekt", version.ref = "detekt" }

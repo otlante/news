@@ -12,9 +12,9 @@ plugins {
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.kotlin.serialization)
-    id("com.asarkar.gradle.build-time-tracker") version "5.0.1"
     id("com.spotify.ruler")
-    id("dev.detekt") version("2.0.0-alpha.1")
+    alias(libs.plugins.build.time.tracker)
+    alias(libs.plugins.detekt)
 }
 
 private val keystorePropertiesFile = file(rootProject.file("keystore.properties"))
@@ -73,7 +73,7 @@ ruler {
 }
 
 detekt {
-    toolVersion = "2.0.0-alpha.1"
+    toolVersion = libs.versions.detekt.get()
     config.setFrom(file(File(rootDir, "config/detekt/detekt.yml")))
     buildUponDefaultConfig = true
 }
