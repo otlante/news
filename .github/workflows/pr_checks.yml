@@ -109,7 +109,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: detekt.html
-          path: build/reports/detekt/detekt.html
+          path: app/build/reports/detekt/detekt.html
 
   check-app-size:
     runs-on: ubuntu-latest

@@ -2,19 +2,40 @@
 
 Мобильное приложение для Android, предназначенное для чтения новостей с возможностью подписки на интересующие темы и получения уведомлений о новых статьях.
 
+![Главный экран приложения](images/1.png)
+![Экран настроек приложения](images/2.png)
+
 ## Используемые технологии
 
+### Основные технологии
+- **Kotlin**
+- **Android SDK**
+- **Jetpack Compose**
+
+### Архитектурные компоненты
 - **Hilt**
 - **Room**
 - **WorkManager**
 - **Navigation Compose**
 - **ViewModel**
 - **Flow**
+
+### Сетевые технологии
 - **Retrofit**
 - **Kotlinx Serialization**
 - **Coil**
-- **DataStore**
 - **OkHttp**
+
+### Дополнительные библиотеки
+- **DataStore** - хранение настроек пользователя
+
+### Gradle плагины
+- **[Build Time Tracker](https://github.com/asarkar/build-time-tracker)** - отслеживание времени сборки
+- **[Detekt](https://detekt.dev/)** - статический анализ кода Kotlin
+- **[Ruler Gradle Plugin](https://github.com/spotify/ruler)** - анализ размера APK и зависимостей
+
+### CI/CD
+- **GitHub Actions** - автоматизация сборки, подписи, анализа кода, сбора метрик сборки, анализа размера APK
 
 ## API
 
