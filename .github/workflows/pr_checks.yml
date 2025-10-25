@@ -19,7 +19,8 @@ jobs:
       - name: Setup environment
         uses: ./.github/actions/init-gradle
       - name: Create keystore.properties
-        uses: ./.github/actions/create-keystore-properties
+        run: |
+          echo "NEWS_API_KEY=\"${{ secrets.NEWS_API_KEY }}\"" >> keystore.properties
       - name: Build
         run: ./gradlew :app:assembleRelease $gradleFlags
       - name: Generate build time report
@@ -115,7 +116,8 @@ jobs:
       - name: Setup environment
         uses: ./.github/actions/init-gradle
       - name: Create keystore.properties
-        uses: ./.github/actions/create-keystore-properties
+        run: |
+          echo "NEWS_API_KEY=\"${{ secrets.NEWS_API_KEY }}\"" >> keystore.properties
       - name: Analyze size
         run: ./gradlew :app:analyzeReleaseBundle $gradleFlags
       - name: Upload report
