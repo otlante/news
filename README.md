@@ -5,7 +5,7 @@
 <table>
   <tr>
     <td valign="top"><img src="images/1.png" align="left" width="350dp"></td>
-    <td valign="top"><img src="images/1.png" align="right" width="350dp"></td>
+    <td valign="top"><img src="images/2.png" align="right" width="350dp"></td>
   </tr>
  </table>
 
