@@ -1,0 +1,10 @@
+name: Create keystore.properties
+description: Create keystore.properties file with keys from secrets
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Grant execute permission for gradlew
+      shell: bash
+      run: |
+        echo "NEWS_API_KEY=\"${{ secrets.NEWS_API_KEY }}\"" >> keystore.properties

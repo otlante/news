@@ -1,7 +1,6 @@
 package com.otlante.news.di
 
 import android.content.Context
-import androidx.compose.ui.input.key.Key.Companion.J
 import androidx.room.Room
 import androidx.work.WorkManager
 import com.otlante.news.data.local.NewsDao
@@ -15,7 +14,6 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.internal.Contexts
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json

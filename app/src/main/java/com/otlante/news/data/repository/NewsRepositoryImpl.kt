@@ -1,12 +1,9 @@
 package com.otlante.news.data.repository
 
 import android.util.Log
-import android.util.TimeUtils
 import androidx.work.Constraints
 import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
-import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.otlante.news.data.background.RefreshDataWorker
@@ -16,24 +13,16 @@ import com.otlante.news.data.local.SubscriptionDbModel
 import com.otlante.news.data.mapper.toDbModels
 import com.otlante.news.data.mapper.toEntities
 import com.otlante.news.data.mapper.toQueryParam
-import com.otlante.news.data.mapper.toRefreshConfig
 import com.otlante.news.data.remote.NewsApiService
 import com.otlante.news.domain.entity.Article
 import com.otlante.news.domain.entity.Language
 import com.otlante.news.domain.entity.RefreshConfig
 import com.otlante.news.domain.repository.NewsRepository
-import com.otlante.news.domain.repository.SettingsRepository
 import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
