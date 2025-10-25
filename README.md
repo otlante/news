@@ -2,14 +2,17 @@
 
 Мобильное приложение для Android, предназначенное для чтения новостей с возможностью подписки на интересующие темы и получения уведомлений о новых статьях.
 
-<img src="images/1.png" alt="Главный экран" width="300"/>
-<img src="images/2.png" alt="Экран настроек приложения" width="300"/>
+<table>
+  <tr>
+    <td valign="top"><img src="images/1.png" align="left" width="350dp"></td>
+    <td valign="top"><img src="images/1.png" align="right" width="350dp"></td>
+  </tr>
+ </table>
 
 ## Используемые технологии
 
 ### Основные технологии
 - **Kotlin**
-- **Android SDK**
 - **Jetpack Compose**
 
 ### Архитектурные компоненты
